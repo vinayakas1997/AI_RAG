@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "extractor": "docling",
+  "extractor_version": "1.0.0",
+  "extraction_time": "2025-12-16T22:46:51.587832",
+  "text": "<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->\n\n<!-- image -->",
+  "tables": [
+    {
+      "index": 0,
+      "text": "self_ref='#/tables/0' parent=RefItem(cref='#/body') children=[] content_layer=<ContentLayer.BODY: 'body'> meta=None label=<DocItemLabel.TABLE: 'table'> prov=[ProvenanceItem(page_no=1, bbox=BoundingBox(l=55.81442642211914, t=786.5978240966797, r=535.0062255859375, b=716.7926483154297, coord_origin=<CoordOrigin.BOTTOMLEFT: 'BOTTOMLEFT'>), charspan=(0, 0))] captions=[] references=[] footnotes=[] image=None data=TableData(table_cells=[], num_rows=0, num_cols=0, grid=[]) annotations=[]",
+      "data": {},
+      "metadata": {
+        "rows": 0,
+        "cols": 0
+      }
+    },
+    {
+      "index": 1,
+      "text": "self_ref='#/tables/1' parent=RefItem(cref='#/body') children=[] content_layer=<ContentLayer.BODY: 'body'> meta=None label=<DocItemLabel.TABLE: 'table'> prov=[ProvenanceItem(page_no=2, bbox=BoundingBox(l=52.903141021728516, t=777.9607353210449, r=539.0936279296875, b=739.6340713500977, coord_origin=<CoordOrigin.BOTTOMLEFT: 'BOTTOMLEFT'>), charspan=(0, 0))] captions=[] references=[] footnotes=[] image=None data=TableData(table_cells=[], num_rows=0, num_cols=0, grid=[]) annotations=[]",
+      "data": {},
+      "metadata": {
+        "rows": 0,
+        "cols": 0
+      }
+    }
+  ],
+  "images": [
+    {
+      "index": 0,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    },
+    {
+      "index": 1,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    },
+    {
+      "index": 2,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    },
+    {
+      "index": 3,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    },
+    {
+      "index": 4,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    },
+    {
+      "index": 5,
+      "caption": "",
+      "metadata": {
+        "page": null
+      }
+    }
+  ],
+  "metadata": {
+    "table_count": 2,
+    "image_count": 6,
+    "languages": [
+      "jpn",
+      "eng"
+    ],
+    "duration_seconds": 5.807627,
+    "file_name": "test_pdf.pdf",
+    "file_size": 1442545
+  },
+  "error": null
+}

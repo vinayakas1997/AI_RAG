@@ -195,3 +195,6 @@ Traceback (most recent call last):
   File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling_ibm_models\layoutmodel\layout_predictor.py", line 77, in __init__
     raise FileNotFoundError(f"Missing model config file: {self._model_config}")
 FileNotFoundError: Missing model config file: C:\Users\106761\.cache\huggingface\hub\models--docling-project--docling-layout-heron\snapshots\bdb7099d742220552d703932cc0ce0a26a7a8da8\config.json
+2025-12-16 22:44:55 | DoclingExtractor | INFO     | Extracting content from: test_pdf.pdf
+2025-12-16 22:46:45 | DoclingExtractor | INFO     | Extracting content from: test_pdf.pdf
+2025-12-16 22:46:51 | DoclingExtractor | INFO     | [EXTRACTION] test_pdf.pdf | Extractor: docling | Status: SUCCESS | Elements: 8 | Duration: 5.81s

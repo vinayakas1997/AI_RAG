@@ -1,0 +1,24 @@
+============================================================
+EXTRACTION SUMMARY
+============================================================
+
+Success: True
+Extractor: docling
+Version: 1.0.0
+Extraction Time: 2025-12-16T22:46:51.587832
+
+Statistics:
+  Total Elements: 0
+  Text Elements: 0
+  Tables: 2
+  Images: 6
+  Duration: 5.81s
+
+Text Length: 94 characters
+
+Saved Files:
+  json: extraction_results/docling\test_pdf_full.json
+  text: extraction_results/docling\test_pdf_text.txt
+  tables_dir: extraction_results/docling\test_pdf_tables
+  images: extraction_results/docling\test_pdf_images.json
+  metadata: extraction_results/docling\test_pdf_metadata.json

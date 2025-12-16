@@ -1,0 +1,21 @@
+============================================================
+EXTRACTION SUMMARY
+============================================================
+
+Success: True
+Extractor: vlm
+Version: 1.0.0
+Extraction Time: 2025-12-16T23:59:35.581404
+
+Statistics:
+  Total Elements: 0
+  Text Elements: 0
+  Tables: 0
+  Images: 0
+  Duration: 1208.70s
+
+Text Length: 0 characters
+
+Saved Files:
+  json: extraction_results/vlm\test_pdf_full.json
+  metadata: extraction_results/vlm\test_pdf_metadata.json

@@ -41,6 +41,9 @@ lxml
 numpy
 pandas
 
+#hugging face
+hf_xet
+
 # Optional: Advanced NLP (uncomment if needed)
 # spacy
 # transformers
