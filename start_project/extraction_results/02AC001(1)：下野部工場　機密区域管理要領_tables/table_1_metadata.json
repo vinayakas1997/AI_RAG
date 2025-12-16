@@ -1,0 +1,38 @@
+{
+  "detection_class_prob": 0.8711110353469849,
+  "coordinates": {
+    "points": [
+      [
+        147.6584014892578,
+        154.38150024414062
+      ],
+      [
+        147.6584014892578,
+        350.8470153808594
+      ],
+      [
+        1482.419189453125,
+        350.8470153808594
+      ],
+      [
+        1482.419189453125,
+        154.38150024414062
+      ]
+    ],
+    "system": "PixelSpace",
+    "layout_width": 1654,
+    "layout_height": 2339
+  },
+  "last_modified": "2025-12-16T11:16:21",
+  "text_as_html": "<table><tbody><tr><td></td><td>Et o</td><td>rai</td><td>wt</td><td>下野 部 工場</td><td>機密 区 域 管理 要領</td><td>分 類</td><td>02AC001( ペー ジ 1/4</td></tr><tr><td>(⑳)</td><td>es</td><td></td><td>[</td><td>主管 部 門 :</td><td>下野 部 工場</td><td>| 定 HE a 5</td><td>年 | 202178526 年 月 日</td></tr></tbody></table>",
+  "filetype": "application/pdf",
+  "languages": [
+    "vie",
+    "est",
+    "cym",
+    "cat"
+  ],
+  "page_number": 1,
+  "file_directory": "C:\\Users\\106761\\Desktop\\Rag_Test_Files\\下野部工場\\02AC001：下野部工場　機密区域管理要領",
+  "filename": "02AC001(1)：下野部工場　機密区域管理要領.pdf"
+}

@@ -473,3 +473,131 @@ class FileUtils:
             size_bytes /= 1024.0
         
         return f"{size_bytes:.2f} PB"
+    
+    @staticmethod
+    def save_extraction_results(
+        result: Dict,
+        output_dir: str = "extraction_results",
+        file_name: str = None
+    ) -> Dict:
+        """
+        Save extraction results to files for inspection
+        
+        Args:
+            result: Extraction result dict from extractor
+            output_dir: Directory to save results
+            file_name: Base filename (auto-generated if None)
+            
+        Returns:
+            dict: Paths to saved files
+        """
+        import json
+        from datetime import datetime
+        
+        try:
+            # Create output directory
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # Generate filename if not provided
+            if not file_name:
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                file_name = f"extraction_{timestamp}"
+            
+            # Remove extension if present
+            file_name = os.path.splitext(file_name)[0]
+            
+            saved_files = {}
+            
+            # 1. Save full result as JSON
+            json_path = os.path.join(output_dir, f"{file_name}_full.json")
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(result, f, indent=2, ensure_ascii=False)
+            saved_files['json'] = json_path
+            
+            # 2. Save extracted text
+            if result.get('text'):
+                text_path = os.path.join(output_dir, f"{file_name}_text.txt")
+                with open(text_path, 'w', encoding='utf-8') as f:
+                    f.write(result['text'])
+                saved_files['text'] = text_path
+            
+            # 3. Save tables separately
+            if result.get('tables'):
+                tables_dir = os.path.join(output_dir, f"{file_name}_tables")
+                os.makedirs(tables_dir, exist_ok=True)
+                
+                for i, table in enumerate(result['tables']):
+                    # Save as text
+                    table_txt_path = os.path.join(tables_dir, f"table_{i+1}.txt")
+                    with open(table_txt_path, 'w', encoding='utf-8') as f:
+                        f.write(table['text'])
+                    
+                    # Save as HTML if available
+                    if table.get('html'):
+                        table_html_path = os.path.join(tables_dir, f"table_{i+1}.html")
+                        with open(table_html_path, 'w', encoding='utf-8') as f:
+                            f.write(table['html'])
+                    
+                    # Save metadata as JSON
+                    table_json_path = os.path.join(tables_dir, f"table_{i+1}_metadata.json")
+                    with open(table_json_path, 'w', encoding='utf-8') as f:
+                        json.dump(table.get('metadata', {}), f, indent=2, ensure_ascii=False)
+                
+                saved_files['tables_dir'] = tables_dir
+            
+            # 4. Save images info
+            if result.get('images'):
+                images_path = os.path.join(output_dir, f"{file_name}_images.json")
+                with open(images_path, 'w', encoding='utf-8') as f:
+                    json.dump(result['images'], f, indent=2, ensure_ascii=False)
+                saved_files['images'] = images_path
+            
+            # 5. Save metadata
+            if result.get('metadata'):
+                metadata_path = os.path.join(output_dir, f"{file_name}_metadata.json")
+                with open(metadata_path, 'w', encoding='utf-8') as f:
+                    json.dump(result['metadata'], f, indent=2, ensure_ascii=False)
+                saved_files['metadata'] = metadata_path
+            
+            # 6. Save summary report
+            summary_path = os.path.join(output_dir, f"{file_name}_summary.txt")
+            with open(summary_path, 'w', encoding='utf-8') as f:
+                f.write("=" * 60 + "\n")
+                f.write("EXTRACTION SUMMARY\n")
+                f.write("=" * 60 + "\n\n")
+                
+                f.write(f"Success: {result.get('success')}\n")
+                f.write(f"Extractor: {result.get('extractor')}\n")
+                f.write(f"Version: {result.get('extractor_version')}\n")
+                f.write(f"Extraction Time: {result.get('extraction_time')}\n\n")
+                
+                if result.get('metadata'):
+                    f.write("Statistics:\n")
+                    f.write(f"  Total Elements: {result['metadata'].get('total_elements', 0)}\n")
+                    f.write(f"  Text Elements: {result['metadata'].get('text_elements', 0)}\n")
+                    f.write(f"  Tables: {result['metadata'].get('table_count', 0)}\n")
+                    f.write(f"  Images: {result['metadata'].get('image_count', 0)}\n")
+                    f.write(f"  Duration: {result['metadata'].get('duration_seconds', 0):.2f}s\n\n")
+                
+                f.write(f"Text Length: {len(result.get('text', ''))} characters\n\n")
+                
+                f.write("Saved Files:\n")
+                for key, path in saved_files.items():
+                    f.write(f"  {key}: {path}\n")
+            
+            saved_files['summary'] = summary_path
+            
+            return {
+                'success': True,
+                'saved_files': saved_files,
+                'output_dir': output_dir
+            }
+        
+        except Exception as e:
+            return {
+                'success': False,
+                'error': str(e)
+            }
+        
+
+

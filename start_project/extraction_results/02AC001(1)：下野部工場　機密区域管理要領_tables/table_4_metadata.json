@@ -1,0 +1,37 @@
+{
+  "detection_class_prob": 0.7350766658782959,
+  "coordinates": {
+    "points": [
+      [
+        200.3238983154297,
+        1378.2467041015625
+      ],
+      [
+        200.3238983154297,
+        2203.2890625
+      ],
+      [
+        1461.825927734375,
+        2203.2890625
+      ],
+      [
+        1461.825927734375,
+        1378.2467041015625
+      ]
+    ],
+    "system": "PixelSpace",
+    "layout_width": 1654,
+    "layout_height": 2339
+  },
+  "last_modified": "2025-12-16T11:16:21",
+  "text_as_html": "<table><thead><tr><th>撮影 を 行う 従業 員</th><th>受入 担当 者 が 所 属す る 部 門 の 役職 者 (GL. MERIAL)</th><th></th></tr></thead><tbody><tr><td>撮影 の 許可 申請 (口頭 ・ メ ー ル 可 )</td><td></td><td></td></tr><tr><td></td><td>撮影 許可 ・ ー</td><td></td></tr><tr><td></td><td>(口頭 メ ル 可 )</td><td></td></tr><tr><td colspan=\"3\">貸出 日 時 等 の 記載 ” ーーーーーーーー 十 ーーーーー</td></tr><tr><td colspan=\"3\">v</td></tr><tr><td>部 門 の 撮影 機器 / 腕 章 を 借り る 。</td><td></td><td></td></tr><tr><td>1</td><td></td><td>撮影 機器 等</td></tr><tr><td>腕章 装着 / 撮 影 実 施</td><td></td><td>会 01V003-6</td></tr><tr><td colspan=\"3\">(各部 門 に て 2 保管)</td></tr><tr><td>撮影 機器 内 の デー タ 削 除</td><td></td><td></td></tr><tr><td colspan=\"3\">a</td></tr><tr><td>腕章 / 撮 影 機器 の 返却</td><td></td><td></td></tr><tr><td>「『ーーーー マ ーーーー ーー</td><td></td><td></td></tr><tr><td>返却 日 時 等 の 記載</td><td>ヒーーーーーーーー 寺 ーーーーー</td><td></td></tr></tbody></table>",
+  "filetype": "application/pdf",
+  "languages": [
+    "jpn",
+    "kor"
+  ],
+  "page_number": 3,
+  "file_directory": "C:\\Users\\106761\\Desktop\\Rag_Test_Files\\下野部工場\\02AC001：下野部工場　機密区域管理要領",
+  "filename": "02AC001(1)：下野部工場　機密区域管理要領.pdf",
+  "parent_id": "db48e2d74771ff6c200afd26ff20c043"
+}

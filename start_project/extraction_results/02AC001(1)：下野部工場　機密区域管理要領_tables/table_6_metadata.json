@@ -1,0 +1,36 @@
+{
+  "detection_class_prob": 0.7624155282974243,
+  "coordinates": {
+    "points": [
+      [
+        184.4410858154297,
+        409.9416809082031
+      ],
+      [
+        184.4410858154297,
+        1379.08056640625
+      ],
+      [
+        1468.9638671875,
+        1379.08056640625
+      ],
+      [
+        1468.9638671875,
+        409.9416809082031
+      ]
+    ],
+    "system": "PixelSpace",
+    "layout_width": 1654,
+    "layout_height": 2339
+  },
+  "last_modified": "2025-12-16T11:16:21",
+  "text_as_html": "<table><thead><tr><th></th><th>Sita 受入 担当 者</th><th>受入 担当 者 が 記 必 する 部 門 の 役職 者 (GL. JERDLE)</th><th>a Wes alk</th></tr></thead><tbody><tr><td></td><td>撮影 の 許可 申請 (日 頭 ・ メ ー ル 可 )</td><td></td><td></td></tr><tr><td></td><td>ーーー</td><td>ト ーーーーー ャ 撮影 許可</td><td></td></tr><tr><td>し</td><td>撮影 許可 の 伝達 | し レー</td><td>ーーーーーーーーーーーーーーー in | |</td><td>(作業 終了 時 実施 報告 書 01C508 一 3</td></tr><tr><td></td><td></td><td>|</td><td>下野 部 工場 に て 保管</td></tr><tr><td>撮影 実施</td><td></td><td>| I</td><td>NY</td></tr><tr><td colspan=\"4\">5 |</td></tr><tr><td colspan=\"4\">対象 物 等 の 記録 | | | と 記録 の 提出 「</td></tr><tr><td>ーーー エ ーー</td><td></td><td></td><td></td></tr><tr><td>記録 の 提 記録 の 提出</td><td></td><td>し |</td><td>その 他 の 社外 者 っ | 社外 者 入 骨 電 WAN 01C508 一 3</td></tr><tr><td>トーーー</td><td>イ ーー</td><td></td><td>(下野 部 工場 に て</td></tr><tr><td></td><td>記録 確認</td><td></td><td>保管 )</td></tr></tbody></table>",
+  "filetype": "application/pdf",
+  "languages": [
+    "jpn"
+  ],
+  "page_number": 4,
+  "file_directory": "C:\\Users\\106761\\Desktop\\Rag_Test_Files\\下野部工場\\02AC001：下野部工場　機密区域管理要領",
+  "filename": "02AC001(1)：下野部工場　機密区域管理要領.pdf",
+  "parent_id": "db48e2d74771ff6c200afd26ff20c043"
+}

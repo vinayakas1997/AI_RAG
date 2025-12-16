@@ -1,0 +1,37 @@
+{
+  "detection_class_prob": 0.9111422896385193,
+  "coordinates": {
+    "points": [
+      [
+        177.29501342773438,
+        409.538330078125
+      ],
+      [
+        177.29501342773438,
+        1299.4639892578125
+      ],
+      [
+        1476.4798583984375,
+        1299.4639892578125
+      ],
+      [
+        1476.4798583984375,
+        409.538330078125
+      ]
+    ],
+    "system": "PixelSpace",
+    "layout_width": 1654,
+    "layout_height": 2339
+  },
+  "last_modified": "2025-12-16T11:16:21",
+  "text_as_html": "<table><thead><tr><th>社外 者</th><th>受入 担当 者</th><th>受入 担当 者 が 所 属す る 部 門 の 役職 者 (GL、 班 長 以上 )</th><th>帳票 証跡</th></tr></thead><tbody><tr><td></td><td>入場 の 許可 申請 (口頭 ・ メ ー ル 可 )</td><td></td><td></td></tr><tr><td></td><td></td><td>1 7 入場 許可 (口頭 ・ メ ー ル 可 )</td><td></td></tr><tr><td>テーーーーー</td><td>入場 許可 の 伝達 腕章 ・ 入 退場 許可 証 貸与 キ ーーーーー</td><td></td><td>社外 者 入 退 場 記録 表</td></tr><tr><td>入場 時 間 等 を 記載 上 ト 2 入場 / 退 場 腕章 ・ 入 退場 許可 証 装着 ik</td><td>ーーーーーーーーーーーーーーーー</td><td>[ee i</td><td>010508-3 (下野 部 工場 に て 保管 )</td></tr><tr><td></td><td>記載 内 容 に ラ 「 確 認 欄 」 へ 担当</td><td>漏れ が 無い か を 確認 者 か 許可 者 の 名 前 を 記載</td><td></td></tr></tbody></table>",
+  "filetype": "application/pdf",
+  "languages": [
+    "jpn",
+    "kor"
+  ],
+  "page_number": 3,
+  "file_directory": "C:\\Users\\106761\\Desktop\\Rag_Test_Files\\下野部工場\\02AC001：下野部工場　機密区域管理要領",
+  "filename": "02AC001(1)：下野部工場　機密区域管理要領.pdf",
+  "parent_id": "db48e2d74771ff6c200afd26ff20c043"
+}

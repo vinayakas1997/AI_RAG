@@ -1,0 +1,36 @@
+{
+  "detection_class_prob": 0.4272186756134033,
+  "coordinates": {
+    "points": [
+      [
+        164.59561157226562,
+        174.6644287109375
+      ],
+      [
+        164.59561157226562,
+        287.3916015625
+      ],
+      [
+        1458.267333984375,
+        287.3916015625
+      ],
+      [
+        1458.267333984375,
+        174.6644287109375
+      ]
+    ],
+    "system": "PixelSpace",
+    "layout_width": 1654,
+    "layout_height": 2339
+  },
+  "last_modified": "2025-12-16T11:16:21",
+  "text_as_html": "<table><tbody><tr><td>下野 [</td><td>機密 区 域 管理 要領</td><td></td><td>&gt;</td><td>甘</td><td></td><td>02AC001(1)</td><td></td></tr><tr><td>部 ]</td><td>場</td><td>付図 1</td><td>EA</td><td>an</td><td>ペー</td><td>ジ</td><td>4/4</td></tr></tbody></table>",
+  "filetype": "application/pdf",
+  "languages": [
+    "kor"
+  ],
+  "page_number": 4,
+  "file_directory": "C:\\Users\\106761\\Desktop\\Rag_Test_Files\\下野部工場\\02AC001：下野部工場　機密区域管理要領",
+  "filename": "02AC001(1)：下野部工場　機密区域管理要領.pdf",
+  "parent_id": "db48e2d74771ff6c200afd26ff20c043"
+}

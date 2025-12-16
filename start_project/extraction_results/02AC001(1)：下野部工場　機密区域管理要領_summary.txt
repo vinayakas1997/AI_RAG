@@ -1,0 +1,23 @@
+============================================================
+EXTRACTION SUMMARY
+============================================================
+
+Success: True
+Extractor: unstructured
+Version: 0.11.6
+Extraction Time: 2025-12-16T17:04:06.283531
+
+Statistics:
+  Total Elements: 43
+  Text Elements: 37
+  Tables: 6
+  Images: 0
+  Duration: 37.92s
+
+Text Length: 2330 characters
+
+Saved Files:
+  json: extraction_results\02AC001(1)：下野部工場　機密区域管理要領_full.json
+  text: extraction_results\02AC001(1)：下野部工場　機密区域管理要領_text.txt
+  tables_dir: extraction_results\02AC001(1)：下野部工場　機密区域管理要領_tables
+  metadata: extraction_results\02AC001(1)：下野部工場　機密区域管理要領_metadata.json

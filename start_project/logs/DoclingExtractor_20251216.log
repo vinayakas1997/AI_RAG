@@ -1,0 +1,197 @@
+2025-12-16 17:23:58 | DoclingExtractor | INFO     | Extracting content from: 02AC001(1)：下野部工場　機密区域管理要領.pdf
+2025-12-16 17:24:01 | DoclingExtractor | ERROR    | Extraction failed: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/docling-project/docling-layout-heron/revision/main (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Proxy Authentication Required')))"), '(Request ID: be287de3-c984-44da-8c1f-227017cf064d)')
+Traceback (most recent call last):
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\urllib3\connection.py", line 721, in connect
+    self._tunnel()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\106761\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 981, in _tunnel
+    raise OSError(f"Tunnel connection failed: {code} {message.strip()}")
+OSError: Tunnel connection failed: 407 Proxy Authentication Required
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Proxy Authentication Required'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/docling-project/docling-layout-heron/revision/main (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Proxy Authentication Required')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\extractors\docling_extractor.py", line 101, in extract
+    result = converter.convert(file_path)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\pydantic\_internal\_validate_call.py", line 39, in wrapper_function
+    return wrapper(*args, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\pydantic\_internal\_validate_call.py", line 136, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 265, in convert
+    return next(all_res)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 288, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 364, in _convert
+    for item in map(
+                ~~~^
+        process_func,
+        ^^^^^^^^^^^^^
+        input_batch,
+        ^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 411, in _process_document
+    conv_res = self._execute_pipeline(in_doc, raises_on_error=raises_on_error)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 432, in _execute_pipeline
+    pipeline = self._get_pipeline(in_doc.format)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 394, in _get_pipeline
+    self.initialized_pipelines[cache_key] = pipeline_class(
+                                            ~~~~~~~~~~~~~~^
+        pipeline_options=pipeline_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\pipeline\standard_pdf_pipeline.py", line 422, in __init__
+    self._init_models()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\pipeline\standard_pdf_pipeline.py", line 444, in _init_models
+    self.layout_model = layout_factory.create_instance(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        options=self.pipeline_options.layout_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        artifacts_path=art_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        accelerator_options=self.pipeline_options.accelerator_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\factories\base_factory.py", line 57, in create_instance
+    return _cls(options=options, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\layout_model.py", line 66, in __init__
+    self.download_models(layout_model_config=layout_model_config)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\layout_model.py", line 100, in download_models
+    return download_hf_model(
+        repo_id=layout_model_config.repo_id,
+    ...<3 lines>...
+        progress=progress,
+    )
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\utils\hf_model_download.py", line 20, in download_hf_model
+    download_path = snapshot_download(
+        repo_id=repo_id,
+    ...<2 lines>...
+        revision=revision,
+    )
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\_snapshot_download.py", line 165, in snapshot_download
+    repo_info = api.repo_info(repo_id=repo_id, repo_type=repo_type, revision=revision)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\hf_api.py", line 2867, in repo_info
+    return method(
+        repo_id,
+    ...<4 lines>...
+        files_metadata=files_metadata,
+    )
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\hf_api.py", line 2660, in model_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\huggingface_hub\utils\_http.py", line 95, in send
+    return super().send(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\requests\adapters.py", line 671, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/docling-project/docling-layout-heron/revision/main (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Proxy Authentication Required')))"), '(Request ID: be287de3-c984-44da-8c1f-227017cf064d)')
+2025-12-16 17:24:20 | DoclingExtractor | INFO     | Extracting content from: 02AC001(1)：下野部工場　機密区域管理要領.pdf
+2025-12-16 17:28:22 | DoclingExtractor | INFO     | Extracting content from: 02AC001(1)：下野部工場　機密区域管理要領.pdf
+2025-12-16 17:29:48 | DoclingExtractor | ERROR    | Extraction failed: Missing model config file: C:\Users\106761\.cache\huggingface\hub\models--docling-project--docling-layout-heron\snapshots\bdb7099d742220552d703932cc0ce0a26a7a8da8\config.json
+Traceback (most recent call last):
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\extractors\docling_extractor.py", line 101, in extract
+    result = converter.convert(file_path)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\pydantic\_internal\_validate_call.py", line 39, in wrapper_function
+    return wrapper(*args, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\pydantic\_internal\_validate_call.py", line 136, in __call__
+    res = self.__pydantic_validator__.validate_python(pydantic_core.ArgsKwargs(args, kwargs))
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 265, in convert
+    return next(all_res)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 288, in convert_all
+    for conv_res in conv_res_iter:
+                    ^^^^^^^^^^^^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 364, in _convert
+    for item in map(
+                ~~~^
+        process_func,
+        ^^^^^^^^^^^^^
+        input_batch,
+        ^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 411, in _process_document
+    conv_res = self._execute_pipeline(in_doc, raises_on_error=raises_on_error)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 432, in _execute_pipeline
+    pipeline = self._get_pipeline(in_doc.format)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\document_converter.py", line 394, in _get_pipeline
+    self.initialized_pipelines[cache_key] = pipeline_class(
+                                            ~~~~~~~~~~~~~~^
+        pipeline_options=pipeline_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\pipeline\standard_pdf_pipeline.py", line 422, in __init__
+    self._init_models()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\pipeline\standard_pdf_pipeline.py", line 444, in _init_models
+    self.layout_model = layout_factory.create_instance(
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        options=self.pipeline_options.layout_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        artifacts_path=art_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        accelerator_options=self.pipeline_options.accelerator_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\factories\base_factory.py", line 57, in create_instance
+    return _cls(options=options, **kwargs)
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling\models\layout_model.py", line 83, in __init__
+    self.layout_predictor = LayoutPredictor(
+                            ~~~~~~~~~~~~~~~^
+        artifact_path=str(artifacts_path),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        device=device,
+        ^^^^^^^^^^^^^^
+        num_threads=accelerator_options.num_threads,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\106761\Desktop\3_AI_RAG_PROJECT\start_project\.venv\Lib\site-packages\docling_ibm_models\layoutmodel\layout_predictor.py", line 77, in __init__
+    raise FileNotFoundError(f"Missing model config file: {self._model_config}")
+FileNotFoundError: Missing model config file: C:\Users\106761\.cache\huggingface\hub\models--docling-project--docling-layout-heron\snapshots\bdb7099d742220552d703932cc0ce0a26a7a8da8\config.json
