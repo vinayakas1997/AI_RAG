@@ -1,0 +1,52 @@
+# Core Dependencies
+python-dotenv
+
+# Document Processing
+unstructured[all-docs]
+python-magic
+python-magic-bin; platform_system == "Windows"
+docling
+
+# PDF Processing
+pypdf
+pdfplumber
+pdf2image
+PyMuPDF
+pytesseract
+
+# Image Processing
+Pillow
+opencv-python
+
+# OCR and Vision Models
+ollama
+
+# Vector Database & Embeddings
+chromadb
+faiss-cpu
+sentence-transformers
+
+# LangChain
+langchain
+langchain-community
+langchain-core
+
+# Utilities
+tqdm
+requests
+beautifulsoup4
+lxml
+
+# Data Handling
+numpy
+pandas
+
+# Optional: Advanced NLP (uncomment if needed)
+# spacy
+# transformers
+
+# Optional: API frameworks (uncomment if needed)
+# fastapi
+# uvicorn
+# gradio
+# streamlit
