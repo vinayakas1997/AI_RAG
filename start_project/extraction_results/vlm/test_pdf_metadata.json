@@ -1,9 +1,0 @@
-{
-  "total_pages": 4,
-  "pages_processed": 0,
-  "pages_data": [],
-  "model": "qwen3-vl:latest",
-  "file_name": "test_pdf.pdf",
-  "file_size": 1442545,
-  "duration_seconds": 1208.695058
-}

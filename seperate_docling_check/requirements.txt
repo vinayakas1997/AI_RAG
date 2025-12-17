@@ -1,0 +1,6 @@
+docling
+matplotlib
+ipywidgets 
+# jupyter
+ipython
+hf_xet
